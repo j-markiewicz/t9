@@ -2,6 +2,22 @@
 
 ![ekran aplikacji](./display.png)
 
+## Problem
+
+Na urządzeniach z małą ilością klawiszy (jak n.p. telefonach komórkowych bez ekranu dotykowego) nie można każdej literze przyznać osobnego klawiszu. Problem ten można rozwiązać w dwa sposoby: Wymagać kilkurazowego kliknięcia klawisza dla różnych liter (metoda [multi-tap](https://en.wikipedia.org/wiki/Multi-tap)) lub zgadywanie litery na podstawie słownika (metoda [T9](https://en.wikipedia.org/wiki/T9_(predictive_text)) i podobne). Program ten implementuje obie te metody z możliwością przełączania między nimi.
+
+## Architektura Programu
+
+Program jest podzielony na 3 części:
+
+- Interfejs użytkownika (w `assets`)
+- Główny program (w `src/main.rs`)
+- Biblioteka (w `src/lib.rs`)
+
+![diagram programu](./diagram.svg)
+
+Opisy głównych algorytmów i struktur danych znajdują się w osobnych plikach: `multitap.md`, `t9.md`, i `iterator.md`.
+
 ## Kompilacja i wykonanie
 
 Wymagane są [Rust i Cargo](https://rustup.rs) w wersji 1.75 lub nowszej.
@@ -33,8 +49,6 @@ Wpisane znaki lub słowa można usunąć używając klawisza `⌫`.
 Katalog `assets` zawiera użyte przez program ikony (`icon.png`, `icon.svg`, `minicon.png`), źródła interfejsu użytkownika (`page.html`, `page.css`, `page.js`) oraz użyte czcionki (`*.woff2`).
 
 Katalog `src` zawiera pliki źródłowe programu: `main.rs` inicjalizuje i komunikuje z interfejsem użytkownika, a `lib.rs` zawiera implementacje algorytmów, które przetwarzają wpisane przez użytkownika znaki. Dodatkowo w `src` znajdują się również słowniki (`words-en.txt` i `words-pl.txt`), które zawierają słowa w danym języku posortowane według popularności.
-
-Opisy głównych algorytmów i struktur danych znajdują się w osobnych plikach: `multitap.md`, `t9.md`, i `iterator.md`.
 
 ## Atrybucja
 
