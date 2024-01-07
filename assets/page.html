@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="/icon.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="/fonts.css" />
+		<link rel="stylesheet" href="/page.css" />
+		<script src="/page.js" defer></script>
+		<title>T9</title>
+	</head>
+
+	<body>
+		<main>
+			<section class="display">
+				<header>
+					<ul>
+						<li>
+							<span class="lang" data-selected="true">EN</span>
+							<span class="lang">PL</span>
+						</li>
+
+						<li>
+							<span class="input" data-selected="true">T9</span>
+							<span class="input">NUM</span>
+							<span class="input">KBD</span>
+						</li>
+
+						<li>
+							<span class="typing" data-selected="true">MT</span>
+							<span class="typing">T9</span>
+						</li>
+					</ul>
+				</header>
+
+				<output class="text" data-initial="true">T9</output>
+
+				<footer>
+					<span class="suggestion" data-selected="true"></span>
+					<span class="suggestion"></span>
+					<span class="suggestion"></span>
+				</footer>
+			</section>
+
+			<section class="nav">
+				<button class="navkey" onclick="window.nextLanguage()">&lt;</button>
+				<button class="navkey" onclick="window.nextLayout()">
+					&EmptySmallSquare;
+				</button>
+				<button class="navkey" onclick="window.nextMode()">&gt;</button>
+			</section>
+
+			<section class="keypad">
+				<button class="key"><b>1</b> <i>,.!?'-&</i></button>
+				<button class="key"><b>2</b> <i>abc</i></button>
+				<button class="key"><b>3</b> <i>def</i></button>
+				<button class="key"><b>4</b> <i>ghi</i></button>
+				<button class="key"><b>5</b> <i>jkl</i></button>
+				<button class="key"><b>6</b> <i>mno</i></button>
+				<button class="key"><b>7</b> <i>pqrs</i></button>
+				<button class="key"><b>8</b> <i>tuv</i></button>
+				<button class="key"><b>9</b> <i>wxyz</i></button>
+				<button class="key"><b>*</b> <i>next</i></button>
+				<button class="key"><b>0</b> <i>␣</i></button>
+				<button class="key"><b>#</b> <i>⌫</i></button>
+			</section>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+[package]
+name = "aisd"
+version = "0.0.0"
+edition = "2021"
+publish = false
+description = "TODO"
+license = "UNLICENSED"
+repository = "https://github.com/j-markiewicz/aisd"
+rust-version = "1.75"
+
+[dependencies]
+image = { version = "0.24.7", default-features = false, features = [
+	"png",
+] }
+tao = { version = "0.24.0", default-features = false, features = [
+	"rwh_05",
+] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = [
+	"env-filter",
+] }
+wry = "0.35.1"
+
+[target.'cfg(unix)'.dependencies]
+gtk = "0.18.1"
